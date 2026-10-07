@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('認識浪浪｜MeowHome', '認識小橘、花花與米米，了解每一隻貓的個性與生活故事。')}"></head>
+<body>
+<a class="skip-link" href="#main">跳至主要內容</a>
+<header th:replace="~{fragments/layout :: header}"></header>
+<main id="main">
+    <section class="section cats-directory" aria-labelledby="page-title">
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="麵包屑導覽"><a href="/" th:href="@{/}">首頁</a><span aria-hidden="true">/</span><span aria-current="page">認識浪浪</span></nav>
+            <div class="directory-heading">
+                <div><p class="eyebrow">等待家的浪浪</p><h1 id="page-title" class="page-title">先認識牠，<br>再一起想像家的樣子。</h1></div>
+                <div class="directory-intro"><p>每隻貓都有自己的步調與故事。<br>從了解開始，讓每一次相遇多一份安心。</p><p class="sample-notice">目前為前台示意資料，尚未開放認養申請。</p></div>
+            </div>
+            <div class="directory-summary"><p>認識 <strong th:text="${#lists.size(cats)}">3</strong> 位浪浪朋友</p><span>小小的相遇，也可能是故事的開始。</span></div>
+            <div class="cat-grid">
+                <th:block th:each="cat : ${cats}"><article th:replace="~{fragments/cat-profile :: profile(${cat})}"></article></th:block>
+            </div>
+            <div class="directory-note"><p>照片、個案與照護資訊均為示意內容。</p><a class="text-link" href="/#tnr" th:href="@{/#tnr}">了解我們的 TNR 行動 <span aria-hidden="true">→</span></a></div>
+        </div>
+    </section>
+</main>
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+</body>
+</html>

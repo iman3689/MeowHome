@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('MeowHome｜讓愛找到家', 'MeowHome 台灣流浪貓公益網站。從照護、醫療、絕育到認養，讓每一隻街頭的貓都有被看見的機會。')}"></head>
+<body>
+<a class="skip-link" href="#main">跳至主要內容</a>
+<header th:replace="~{fragments/layout :: header}"></header>
+<main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-layout">
+        <div class="hero-copy">
+            <p class="eyebrow"><span class="small-rule" aria-hidden="true"></span>每一份關心，都是改變的開始</p>
+            <h1 id="hero-title">讓每一隻街頭的貓，都有被看見的機會。</h1>
+            <p class="hero-intro">從醫療、絕育到認養，<br>我們陪伴浪浪走向更安心的生活。</p>
+            <div class="hero-actions"><a class="button" href="/cats" th:href="@{/cats}">認識浪浪 <span aria-hidden="true">↗</span></a><a class="text-link" href="#actions">了解我們的行動 <span aria-hidden="true">→</span></a></div>
+            <div class="hero-footnote"><span>MEOWHOME · TAIWAN</span><p>把善意，留在牠們生活的地方。</p></div>
+        </div>
+        <figure class="hero-photo"><img src="/images/hero-indoor-cat.jpg" th:src="@{/images/hero-indoor-cat.jpg}" width="1800" height="1200" alt="虎斑貓坐在米色沙發上，安靜望向鏡頭" fetchpriority="high"><figcaption><span>每一個生命，都值得被溫柔以待。</span><span>01 / 日常裡的陪伴</span></figcaption></figure>
+        </div>
+    </section>
+    <section id="impact" class="impact" aria-labelledby="impact-title">
+        <svg class="impact-wave impact-wave-top" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 54 C170 88 310 14 490 34 C690 60 780 90 1000 46 C1190 10 1300 74 1440 42 L1440 100 L0 100 Z"/></svg>
+        <div class="impact-body">
+            <div class="container">
+                <div class="impact-heading"><p class="eyebrow">公益成果</p><h2 id="impact-title">一起，讓改變慢慢發生。</h2></div>
+                <div class="impact-numbers">
+                    <dl class="impact-main">
+                        <div class="impact-stat"><dt><svg class="impact-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M36 14A15 15 0 0 0 11 13l-4 5m0-9v9h9M12 34a15 15 0 0 0 25-1l4-5m0 9v-9h-9M24 18v12m-6-6h12"/></svg><span>完成絕育</span></dt><dd><span class="stat-value" data-count="1286" aria-hidden="true">1,286</span><span class="sr-only">1,286</span><span class="stat-suffix">+</span></dd></div>
+                    </dl>
+                    <dl class="impact-secondary">
+                        <div class="impact-stat"><dt><svg class="impact-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M8 23 24 9l16 14M13 20v20h22V20M24 33s-8-4-8-9a4 4 0 0 1 8-1 4 4 0 0 1 8 1c0 5-8 9-8 9Z"/></svg><span>成功送養</span></dt><dd><span class="stat-value" data-count="327" aria-hidden="true">327</span><span class="sr-only">327</span></dd></div>
+                        <div class="impact-stat"><dt><svg class="impact-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="9" y="15" width="30" height="25" rx="2"/><path d="M17 15V9h14v6M24 21v12m-6-6h12"/></svg><span>醫療救援</span></dt><dd><span class="stat-value" data-count="92" aria-hidden="true">92</span><span class="sr-only">92</span></dd></div>
+                        <div class="impact-stat"><dt><svg class="impact-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="19" cy="16" r="6"/><path d="M7 38v-5a12 12 0 0 1 24 0v5M33 11a6 6 0 0 1 0 12M35 28a10 10 0 0 1 6 10M13 38h12"/></svg><span>合作志工</span></dt><dd><span class="stat-value" data-count="46" aria-hidden="true">46</span><span class="sr-only">46</span></dd></div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <svg class="impact-wave impact-wave-bottom" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 0 L1440 0 L1440 50 C1240 18 1130 90 950 66 C750 38 630 10 430 56 C260 92 140 24 0 62 Z"/></svg>
+    </section>
+
+    <section id="about" class="section about-section" aria-labelledby="about-title">
+        <div class="container">
+            <div class="section-heading" id="actions"><div><p class="eyebrow">我們正在做的事</p><h2 id="about-title">改變街頭生命，<br>需要的不只是一次救援</h2></div><p class="heading-aside">看見牠的需要，也理解牠生活的街區。<br>我們希望從日常照護開始，串起醫療、絕育與認養，讓善意成為長久的陪伴。</p></div>
+<div class="tab-set" data-tab-group>
+    <div class="tab-controls" hidden aria-label="公益行動方向">
+        <button type="button" id="action-tab-1" data-panel="action-panel-1"><span class="tab-number">01</span><span>街貓照護</span></button>
+        <button type="button" id="action-tab-2" data-panel="action-panel-2"><span class="tab-number">02</span><span>醫療救援</span></button>
+        <button type="button" id="action-tab-3" data-panel="action-panel-3"><span class="tab-number">03</span><span>絕育行動</span></button>
+        <button type="button" id="action-tab-4" data-panel="action-panel-4"><span class="tab-number">04</span><span>認養媒合</span></button>
+    </div>
+    <article class="interaction-panel" data-tab-panel id="action-panel-1" aria-labelledby="action-heading-1">
+        <figure class="panel-photo"><img src="/images/community-cat.jpg" th:src="@{/images/community-cat.jpg}" alt="貓咪安心接受人的輕柔觸碰" width="1200" height="800" loading="lazy"><figcaption>照護情境 / 示意攝影</figcaption></figure>
+        <div class="panel-copy"><p class="eyebrow">街貓照護</p><h3 id="action-heading-1">先把日常照顧好，才能看見改變。</h3><p>穩定的食物、乾淨的環境與細心觀察，是守護街頭生命的第一步。</p><ul><li>觀察食慾與活動狀況，留意日常的小變化。</li><li>和社區維持溝通，讓照護成為可以持續的事。</li></ul><a class="text-link" href="/#tnr" th:href="@{/#tnr}">了解持續照護 <span aria-hidden="true">→</span></a></div>
+    </article>
+    <article class="interaction-panel" data-tab-panel id="action-panel-2" aria-labelledby="action-heading-2">
+        <figure class="panel-photo"><img src="/images/story-cat.jpg" th:src="@{/images/story-cat.jpg}" alt="虎斑貓安靜待在柔和光線裡" width="1200" height="800" loading="lazy"><figcaption>照護情境 / 示意攝影</figcaption></figure>
+        <div class="panel-copy"><p class="eyebrow">醫療救援</p><h3 id="action-heading-2">陪牠度過不舒服的日子。</h3><p>從發現傷病到就醫與休養，陪牠度過不舒服的日子，找回生活的力氣。</p><ul><li>由獸醫評估健康狀況與需要的醫療處置。</li><li>提供穩定的休養環境，持續觀察恢復情況。</li></ul><a class="text-link" href="/cats/2" th:href="@{/cats/2}">認識休養中的花花 <span aria-hidden="true">→</span></a></div>
+    </article>
+    <article class="interaction-panel" data-tab-panel id="action-panel-3" aria-labelledby="action-heading-3">
+        <figure class="panel-photo"><img src="/images/cat-sesame.jpg" th:src="@{/images/cat-sesame.jpg}" alt="一隻貓在戶外石板上自在休息" width="1200" height="800" loading="lazy"><figcaption>照護情境 / 示意攝影</figcaption></figure>
+        <div class="panel-copy"><p class="eyebrow">絕育行動</p><h3 id="action-heading-3">從源頭，陪街區慢慢變得更好。</h3><p>結合社區與志工的力量，透過持續的 TNR 與照護，減少街頭繁殖。</p><ul><li>結合環境觀察、專業評估與細心休養。</li><li>絕育之後，仍持續關心原有生活環境。</li></ul><a class="text-link" href="/#tnr" th:href="@{/#tnr}">探索 TNR 四個步驟 <span aria-hidden="true">→</span></a></div>
+    </article>
+    <article class="interaction-panel" data-tab-panel id="action-panel-4" aria-labelledby="action-heading-4">
+        <figure class="panel-photo"><img src="/images/cat-mochi.jpg" th:src="@{/images/cat-mochi.jpg}" alt="虎斑貓在明亮的室內階梯上等待" width="1200" height="800" loading="lazy"><figcaption>照護情境 / 示意攝影</figcaption></figure>
+        <div class="panel-copy"><p class="eyebrow">認養媒合</p><h3 id="action-heading-4">讓相遇，有安心相伴的可能。</h3><p>了解貓咪的個性，也理解家的期待。讓每一次相遇，都有安心相伴的可能。</p><ul><li>先了解個性、生活步調與照護需求。</li><li>給彼此熟悉的時間，尊重每一隻貓的步調。</li></ul><a class="text-link" href="/cats" th:href="@{/cats}">認識等待家的浪浪 <span aria-hidden="true">→</span></a></div>
+    </article>
+</div>
+        </div>
+    </section>
+    <section id="cats" class="section cats-section" aria-labelledby="cats-title">
+        <div class="container">
+            <div class="section-heading"><div><p class="eyebrow">等待家的浪浪</p><h2 id="cats-title">下一個故事，<br class="mobile-break">也許有你。</h2></div><p class="heading-aside">不必急著決定，先好好認識牠。<br><span class="data-note">以下為示意個案與攝影，尚未開放認養。</span></p></div>
+            <div class="cat-grid">
+                <th:block th:each="cat : ${cats}"><article th:replace="~{fragments/cat-profile :: profile(${cat})}"></article></th:block>
+            </div>
+            <div class="section-end"><a class="text-link" href="/cats" th:href="@{/cats}">查看所有浪浪 <span aria-hidden="true">→</span></a></div>
+        </div>
+    </section>
+    <section id="stories" class="section editorial-section" aria-labelledby="story-title">
+        <div class="container">
+            <div class="section-heading">
+                <div><p class="eyebrow">浪浪故事</p><h2 id="story-title">陪伴留下的，<br>不只是一次相遇。</h2></div>
+                <p class="heading-aside">看見個性，也看見牠走過的日常。<br>每一份信任，都是陪伴留下的痕跡。</p>
+            </div>
+            <div class="story-carousel" data-carousel aria-label="浪浪故事">
+                <div class="carousel-controls" hidden>
+                    <div class="carousel-arrows"><button type="button" data-prev aria-label="上一則浪浪故事">←</button><button type="button" data-next aria-label="下一則浪浪故事">→</button></div>
+                    <p class="carousel-status" data-carousel-status aria-live="polite" aria-atomic="true">第 1 則，共 3 則</p>
+                    <div class="carousel-dots" aria-label="選擇浪浪故事"><button type="button" th:each="cat, iteration : ${cats}" data-slide-button th:attr="data-index=${iteration.index},aria-label=${'切換至' + cat.name + '的故事'}"><span th:text="${iteration.count}">1</span></button></div>
+                </div>
+                <div class="carousel-stage">
+                    <article class="story-slide" data-slide th:each="cat, iteration : ${cats}" th:id="${'carousel-story-' + cat.id}" th:attr="aria-labelledby=${'carousel-name-' + cat.id}">
+                        <a class="slide-photo" th:href="@{/cats/{id}(id=${cat.id})}" th:attr="aria-label=${'閱讀' + cat.name + '的故事'}"><img th:src="@{${cat.imagePath}}" th:alt="${cat.imageAlt}" width="800" height="1000" loading="lazy"></a>
+                        <div class="slide-copy"><p class="eyebrow" th:text="${cat.status == '休養中' ? '照護日常 / 陪牠慢慢恢復' : '相遇與信任 / 走向安心的日常'}">相遇與信任</p><h3 th:id="${'carousel-name-' + cat.id}" th:text="${cat.name}">浪浪名字</h3><p class="slide-lead" th:text="${cat.story[0]}">故事開頭</p><p class="story-excerpt" th:text="${cat.introduction}">故事摘要</p><a class="text-link" th:href="@{/cats/{id}(id=${cat.id})}" th:attr="aria-label=${'閱讀' + cat.name + '的故事'}">閱讀故事 <span aria-hidden="true">→</span></a><p class="data-note">示意個案 / 每一份信任，都值得被好好接住。</p></div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tnr" class="section tnr-section" aria-labelledby="tnr-title">
+        <div class="container">
+            <div class="section-heading"><div><p class="eyebrow">TNR 行動 / 有照護的絕育</p><h2 id="tnr-title">從源頭，<br>改善街頭動物的生活</h2></div><p class="heading-aside">不是一次性的任務，<br>而是和社區一起，持續守護的承諾。</p></div>
+<div class="tab-set tnr-tabs" data-tab-group>
+    <div class="tab-controls tnr-controls" hidden aria-label="TNR 行動步驟">
+        <button type="button" id="tnr-step-tab-1" data-panel="tnr-step-panel-1"><span class="tab-number">01</span><span>誘捕</span></button>
+        <button type="button" id="tnr-step-tab-2" data-panel="tnr-step-panel-2"><span class="tab-number">02</span><span>醫療與絕育</span></button>
+        <button type="button" id="tnr-step-tab-3" data-panel="tnr-step-panel-3"><span class="tab-number">03</span><span>休養</span></button>
+        <button type="button" id="tnr-step-tab-4" data-panel="tnr-step-panel-4"><span class="tab-number">04</span><span>原地回置與持續照護</span></button>
+    </div>
+    <article class="interaction-panel tnr-panel" data-tab-panel id="tnr-step-panel-1" aria-labelledby="tnr-step-heading-1">
+        <figure class="panel-photo"><img src="/images/community-cat.jpg" th:src="@{/images/community-cat.jpg}" alt="貓咪與照護者互動的安靜片刻" width="1200" height="800" loading="lazy"><figcaption>照護情境 / 示意攝影</figcaption></figure>
+        <div class="panel-copy"><p class="eyebrow">TNR 行動</p><h3 id="tnr-step-heading-1">01 / 先理解牠熟悉的街區</h3><p>觀察生活環境，安排合適的誘捕時間，盡可能減少緊迫。</p><ul><li>先和照護者溝通，了解貓咪的日常活動。</li><li>由有經驗的人員安排方式與安全運送。</li></ul></div>
+    </article>
+    <article class="interaction-panel tnr-panel" data-tab-panel id="tnr-step-panel-2" aria-labelledby="tnr-step-heading-2">
+        <figure class="panel-photo"><img src="/images/story-cat.jpg" th:src="@{/images/story-cat.jpg}" alt="貓咪在室內安靜休息" width="1200" height="800" loading="lazy"><figcaption>照護情境 / 示意攝影</figcaption></figure>
+        <div class="panel-copy"><p class="eyebrow">TNR 行動</p><h3 id="tnr-step-heading-2">02 / 把健康評估交給專業</h3><p>由獸醫評估健康狀況，進行所需的醫療處置與絕育。</p><ul><li>依個別狀況決定處置，先確認是否適合手術。</li><li>記錄照護需要，安排後續觀察。</li></ul></div>
+    </article>
+    <article class="interaction-panel tnr-panel" data-tab-panel id="tnr-step-panel-3" aria-labelledby="tnr-step-heading-3">
+        <figure class="panel-photo"><img src="/images/cat-sesame.jpg" th:src="@{/images/cat-sesame.jpg}" alt="橘色虎斑貓放鬆躺下休息" width="1200" height="800" loading="lazy"><figcaption>照護情境 / 示意攝影</figcaption></figure>
+        <div class="panel-copy"><p class="eyebrow">TNR 行動</p><h3 id="tnr-step-heading-3">03 / 留一段安心恢復的時間</h3><p>提供安靜、安全的空間，觀察恢復情況，等待身體準備好。</p><ul><li>持續觀察食慾、精神與恢復狀況。</li><li>依獸醫建議調整照護與追蹤安排。</li></ul></div>
+    </article>
+    <article class="interaction-panel tnr-panel" data-tab-panel id="tnr-step-panel-4" aria-labelledby="tnr-step-heading-4">
+        <figure class="panel-photo"><img src="/images/hero-indoor-cat.jpg" th:src="@{/images/hero-indoor-cat.jpg}" alt="虎斑貓在熟悉的室內安靜觀察周遭" width="1200" height="800" loading="lazy"><figcaption>照護情境 / 示意攝影</figcaption></figure>
+        <div class="panel-copy"><p class="eyebrow">TNR 行動</p><h3 id="tnr-step-heading-4">04 / 回到街區，也繼續被看見</h3><p>經評估後回到熟悉的街區，持續關注牠的健康與日常。</p><ul><li>先確認恢復狀況與原有環境是否適合。</li><li>和社區一起持續觀察，讓照護接得上。</li></ul></div>
+    </article>
+</div>
+            <p class="tnr-note">每一步，都需要專業評估、細心照護，以及社區的理解。</p>
+        </div>
+    </section>
+    <section id="news" class="section news-section" aria-labelledby="news-title">
+        <div class="container" data-news>
+            <div class="section-heading news-heading">
+                <div><p class="eyebrow">近期行動 / 最新消息</p><h2 id="news-title">把關心，<br>帶進更多日常。</h2></div>
+                <div class="news-heading-aside"><p>街區照護、健康評估與認養的下一步。</p><p class="data-note">示意行動內容，實際活動資訊確認後更新。</p><a class="text-link news-view-all" href="#news-feed" data-news-all>查看全部 <span aria-hidden="true">→</span></a></div>
+            </div>
+            <div class="news-toolbar">
+                <div class="news-filters" hidden role="group" aria-label="消息分類">
+                    <button type="button" data-news-filter="all" aria-pressed="true" aria-controls="news-feed">全部</button>
+                    <button type="button" data-news-filter="care" aria-pressed="false" aria-controls="news-feed">街區照護</button>
+                    <button type="button" data-news-filter="tnr" aria-pressed="false" aria-controls="news-feed">TNR</button>
+                    <button type="button" data-news-filter="adoption" aria-pressed="false" aria-controls="news-feed">認養</button>
+                    <button type="button" data-news-filter="medical" aria-pressed="false" aria-controls="news-feed">醫療</button>
+                </div>
+                <p class="news-filter-status" data-news-status role="status" aria-live="polite" aria-atomic="true">全部 · 3 則內容</p>
+            </div>
+            <p class="news-swipe-hint">左右滑動，探索更多行動 <span aria-hidden="true">↔</span></p>
+            <div class="news-grid" id="news-feed" data-news-feed data-visible-count="3" tabindex="0" aria-label="近期行動內容，可左右捲動">
+                <article class="news-item" data-categories="care" aria-labelledby="news-care-title">
+                    <div class="news-media"><figure class="news-photo"><img src="/images/community-cat.jpg" th:src="@{/images/community-cat.jpg}" width="1200" height="800" alt="貓咪與人建立信任的溫柔互動" loading="lazy"></figure></div>
+                    <p class="news-meta">街區照護 / 籌備中</p><h3 id="news-care-title">從觀察開始，讓照護接得上</h3><p class="news-intro">把街區裡的小變化記下來，讓關心有機會成為長期陪伴。</p>
+                    <details class="news-details"><summary><span>了解行動</span><span class="news-arrow" aria-hidden="true">→</span></summary><p>規劃整理食慾、活動與環境觀察的照護筆記，分享與社區溝通的方式。內容目前為示意，後續將依實際規劃更新。</p><a class="text-link" href="#actions">看看照護方向 <span aria-hidden="true">→</span></a></details>
+                </article>
+                <article class="news-item news-featured" data-categories="tnr medical" aria-labelledby="news-tnr-title">
+                    <div class="news-media"><figure class="news-photo"><img src="/images/cat-sesame.jpg" th:src="@{/images/cat-sesame.jpg}" width="800" height="533" alt="貓咪在戶外放鬆休息的日常" loading="lazy"></figure></div>
+                    <p class="news-meta">TNR / 醫療照護 / 資訊整理中</p><h3 id="news-tnr-title">絕育之後，陪伴仍然繼續</h3><p class="news-intro">從健康評估、絕育到休養，理解醫療與持續照護如何接上。</p>
+                    <details class="news-details"><summary><span>了解行動</span><span class="news-arrow" aria-hidden="true">→</span></summary><p>規劃分享 TNR 的各個階段，包括獸醫健康評估、醫療與絕育、術後休養，以及與照護者和社區合作的觀念。此處為示意內容，尚無活動報名。</p><a class="text-link" href="#tnr">探索 TNR 步驟 <span aria-hidden="true">→</span></a></details>
+                </article>
+                <article class="news-item" data-categories="adoption" aria-labelledby="news-adoption-title">
+                    <div class="news-media"><figure class="news-photo"><img src="/images/cat-mochi.jpg" th:src="@{/images/cat-mochi.jpg}" width="800" height="1067" alt="虎斑貓在明亮的室內看向鏡頭" loading="lazy"></figure></div>
+                    <p class="news-meta">認養準備 / 籌備中</p><h3 id="news-adoption-title">在相遇之前，先學會理解</h3><p class="news-intro">認識個性與生活需要，為彼此準備更安心的開始。</p>
+                    <details class="news-details"><summary><span>了解行動</span><span class="news-arrow" aria-hidden="true">→</span></summary><p>規劃整理認養前的生活準備與陪伴觀念。歡迎先認識網站上的三位示意浪浪，了解不同的生活步調。</p><a class="text-link" href="/cats" th:href="@{/cats}">認識浪浪 <span aria-hidden="true">→</span></a></details>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="support" class="section support-section" aria-labelledby="support-title">
+        <div class="container support-layout">
+            <div><p class="eyebrow">讓善意，成為日常</p><h2 id="support-title">一點點支持，<br>也能成為浪浪生命裡<br>很大的改變。</h2></div>
+            <div class="support-copy"><p>一份分享、一段時間、一份願意理解的心。<br>每個人，都能找到適合自己的參與方式。</p><div class="support-actions"><a class="button button-warm" href="#support-info">支持我們 <span aria-hidden="true">↗</span></a><a class="text-link" href="#volunteer">加入志工 <span aria-hidden="true">→</span></a></div><div id="support-info" class="participation-info"><h3>從分享友善觀念開始</h3><p>支持方式正在籌備中。現在，你可以把對浪浪的關心分享給身邊的人。</p></div><div id="volunteer" class="participation-info"><h3>把時間，留給需要陪伴的生命</h3><p>志工參與辦法將於後續公布，目前尚未開放報名。</p></div></div>
+        </div>
+    </section>
+</main>
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+</body>
+</html>

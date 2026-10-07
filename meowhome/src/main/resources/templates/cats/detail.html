@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head(${cat.name + '｜MeowHome'}, ${cat.introduction})}"></head>
+<body>
+<a class="skip-link" href="#main">跳至主要內容</a>
+<header th:replace="~{fragments/layout :: header}"></header>
+<main id="main">
+    <section class="section cat-detail-section" aria-labelledby="cat-title">
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="麵包屑導覽"><a href="/" th:href="@{/}">首頁</a><span aria-hidden="true">/</span><a href="/cats" th:href="@{/cats}">認識浪浪</a><span aria-hidden="true">/</span><span aria-current="page" th:text="${cat.name}">浪浪名字</span></nav>
+            <div class="cat-detail-layout">
+                <figure class="cat-detail-photo"><img th:src="@{${cat.imagePath}}" th:alt="${cat.imageAlt}" width="800" height="1000" fetchpriority="high"><figcaption>每一個生命，都有自己的故事。 / 示意攝影</figcaption></figure>
+                <div class="cat-detail-copy">
+                    <p class="eyebrow">等待家的浪浪 / 認識牠的日常</p>
+                    <h1 id="cat-title" class="page-title" th:text="${cat.name}">浪浪名字</h1>
+                    <p class="cat-introduction" th:text="${cat.introduction}">浪浪簡介</p>
+                    <dl class="cat-facts"><div><dt>年齡</dt><dd th:text="${cat.age}">年齡</dd></div><div><dt>性別</dt><dd th:text="${cat.gender}">性別</dd></div><div><dt>所在地區</dt><dd th:text="${cat.location}">地區</dd></div><div><dt>目前狀態</dt><dd th:text="${cat.status}">狀態</dd></div></dl>
+                    <ul class="personality-list" aria-label="個性特徵"><li th:each="trait : ${cat.personality}" th:text="${trait}">個性</li></ul>
+                    <p class="sample-notice">此為示意個案與假資料，尚未開放認養申請。</p>
+                    <a class="text-link" href="#cat-story">讀讀牠的故事 <span aria-hidden="true">↓</span></a>
+                </div>
+            </div>
+            <div id="cat-story" class="cat-story-layout">
+                <article class="cat-story-copy" aria-labelledby="cat-story-title"><p class="eyebrow">牠的故事</p><h2 id="cat-story-title" th:text="${'關於' + cat.name + '，和那些慢慢靠近的日子'}">牠的故事</h2><p th:each="paragraph : ${cat.story}" th:text="${paragraph}">故事段落</p></article>
+                <aside class="cat-care" aria-label="照護與健康資訊"><section><h2>健康與照護</h2><ul><li th:each="note : ${cat.healthNotes}" th:text="${note}">健康狀況</li></ul></section><section><h2>適合牠的陪伴</h2><ul><li th:each="note : ${cat.careNotes}" th:text="${note}">陪伴方式</li></ul></section><p class="data-note">以上資訊為前台展示假資料，並非實際醫療或送養紀錄。</p></aside>
+            </div>
+            <div class="cat-detail-bottom"><a class="text-link" href="/cats" th:href="@{/cats}"><span aria-hidden="true">←</span>返回浪浪列表</a><a class="text-link" href="/#support" th:href="@{/#support}">支持街頭生命 <span aria-hidden="true">→</span></a></div>
+        </div>
+    </section>
+    <section class="section related-cats" aria-labelledby="related-title">
+        <div class="container"><div class="section-heading"><div><p class="eyebrow">還有更多值得認識的生命</p><h2 id="related-title">也聽聽牠們的故事。</h2></div><a class="text-link" href="/cats" th:href="@{/cats}">所有浪浪 <span aria-hidden="true">→</span></a></div><div class="cat-grid related-grid"><th:block th:each="cat : ${relatedCats}"><article th:replace="~{fragments/cat-profile :: profile(${cat})}"></article></th:block></div></div>
+    </section>
+</main>
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+</body>
+</html>

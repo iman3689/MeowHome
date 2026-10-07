@@ -1,0 +1,6 @@
+{
+    "projectManager.git.baseFolders": [
+        "Web_Cat"
+    ],
+    "java.compile.nullAnalysis.mode": "automatic"
+}

@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('找不到頁面｜MeowHome', '這個頁面目前不存在，回到浪浪列表繼續認識牠們。')}"></head>
+<body>
+<a class="skip-link" href="#main">跳至主要內容</a>
+<header th:replace="~{fragments/layout :: header}"></header>
+<main id="main" class="section not-found"><div class="container"><p class="eyebrow">404 / 找不到頁面</p><h1 class="page-title">這裡暫時沒有牠的故事。</h1><p>這個頁面目前不存在。回到列表，繼續認識等待被看見的浪浪。</p><a class="button" href="/cats" th:href="@{/cats}">返回浪浪列表 <span aria-hidden="true">→</span></a></div></main>
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+</body>
+</html>
